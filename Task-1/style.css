@@ -1,0 +1,118 @@
+*{
+  box-sizing: border-box;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+.container{
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+  height: 100%;
+  grid-template-columns: 17vmin 8vmin 5vmin 7vmin 10vmin 15vmin 15vmin;
+  grid-template-rows: 4vmin 9vmin 15vmin 7vmin 13vmin 8vmin 5vmin;
+  align-items: stretch;
+  justify-items: stretch;
+  background-color: black;
+  margin: 20px solid;
+  grid-template-areas: 
+  "a b b c d e e"
+  "f g g g h e e"
+  "f g g g i e e"
+  "f j j j i k l"
+  "m j j j n o l"
+  "m j j j n p q"
+  "r j j j n s q";
+  animation: animate-columns 30s ease-in-out infinite alternate;
+}
+img{
+  width: 100%;
+  height: 100%;
+}
+.container> :nth-child(1){
+  grid-area: a;
+}
+.container> :nth-child(2){
+  grid-area: b;
+}
+.container> :nth-child(3){
+  grid-area: c;
+}
+.container> :nth-child(4){
+  grid-area: d;
+}
+.container> :nth-child(5){
+  grid-area: e;
+}
+.container> :nth-child(6){
+  grid-area: f;
+}
+.container> :nth-child(7){
+  grid-area: g;
+}
+.container> :nth-child(8){
+  grid-area: h;
+}
+.container> :nth-child(9){
+  grid-area: i;
+}
+.container> :nth-child(10){
+  grid-area: j;
+}
+.container> :nth-child(11){
+  grid-area: k;
+}
+.container> :nth-child(12){
+  grid-area: l;
+}
+.container> :nth-child(13){
+  grid-area: m;
+}
+.container> :nth-child(14){
+  grid-area: n;
+}
+.container> :nth-child(15){
+  grid-area: o;
+}
+.container> :nth-child(16){
+  grid-area: p;
+}
+.container> :nth-child(17){
+  grid-area: q;
+}
+.container> :nth-child(18){
+  grid-area: r;
+}
+.container> :nth-child(19){
+  grid-area: s;
+}
+@keyframes animate-columns {
+  0% {
+    grid-template-columns: 17vmin 8vmin 5vmin 7vmin 10vmin 15vmin 15vmin;
+    grid-template-rows: 4vmin 9vmin 15vmin 7vmin 13vmin 8vmin 5vmin;
+  }
+  25% {
+    grid-template-columns: 10vmin 8vmin 15vmin 5vmin 7vmin 15vmin 17vmin;
+    grid-template-rows: 15vmin 4vmin 7vmin 8vmin 5vmin 13vmin 9vmin;
+  }
+  50% {
+    grid-template-columns: 15vmin 10vmin 17vmin 5vmin 7vmin 15vmin 8vmin;
+    grid-template-rows: 4vmin 9vmin 5vmin 13vmin 7vmin 8vmin 15vmin;
+  }
+  75% {
+    grid-template-columns: 8vmin 5vmin 7vmin 15vmin 17vmin 15vmin 10vmin;
+    grid-template-rows: 13vmin 4vmin 15vmin 9vmin 5vmin 7vmin 8vmin;
+  }
+  100% {
+    grid-template-columns: 10vmin 8vmin 5vmin 7vmin 15vmin 15vmin 17vmin;
+    grid-template-rows: 4vmin 15vmin 9vmin 7vmin 8vmin 5vmin 13vmin;
+  }
+}
